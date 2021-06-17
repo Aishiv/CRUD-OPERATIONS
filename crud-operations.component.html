@@ -1,0 +1,122 @@
+
+<!-- table-striped table-responsive-md btn-table  -->
+<div class="row no-gutters">
+    <div class="col-20"> 
+        <div class="table-responsive tableFixHead tableFixHead1 tableFixHead-400 tableFixHeadD-520">
+            <table>
+                <tr>
+                    <th>
+                        First Name
+                    </th>
+                    <th>
+                        Middle Name
+                    </th>
+                    <th>
+                        Last Name
+                    </th>
+                    <th>
+                        Role
+                    </th>
+                    <th>
+                        Salary
+                    </th>
+                    <th>
+                        Mobile No.
+                    </th>
+                    <th>
+                        Address
+                    </th>
+                    <th>
+                        Reporting Person
+                    </th>
+                    <!-- <th>
+                        Update
+                    </th> -->
+                    <th>
+                        Delete
+                    </th>
+                </tr>
+                <tr *ngFor="let emp of employeeList">
+                    <td>
+                        <span *ngIf="emp.empId">
+                            {{emp.empFname}} 
+                        </span>
+                        <span *ngIf="!emp.empId">
+                            <input type="text" [(ngModel)]="emp.empFname"> 
+                        </span>
+                    </td>  
+                    <td>
+                        <span *ngIf="emp.empId">
+                            {{emp.empMiddleName}} 
+                        </span>
+                        <span *ngIf="!emp.empId">
+                            <input type="text" [(ngModel)]="emp.empMiddleName"> 
+                        </span>
+                    </td>
+                   <td>
+                       <span *ngIf="emp.empId">
+                          {{emp.empFinalname}} 
+                        </span>
+                        <span *ngIf="!emp.empId">
+                           <input type="text" [(ngModel)]="emp.empFinalname"> 
+                        </span>
+                   </td>
+                    <td>
+                        <span *ngIf="emp.empId">
+                            {{emp.empRole}} 
+                        </span>
+                        <span *ngIf="!emp.empId">
+                            <input type="text" [(ngModel)]="emp.empRole"> 
+                        </span>
+                    </td>
+                   <td>
+                       <span *ngIf="emp.empId">
+                         {{emp.empSalary}} 
+                       </span>
+                       <span *ngIf="!emp.empId">
+                          <input type="text" [(ngModel)]="emp.empSalary"> 
+                       </span>
+                   </td>
+                   <td>
+                       <span *ngIf="emp.empId">
+                         {{emp.empMobNo}} 
+                       </span>
+                       <span *ngIf="!emp.empId">
+                          <input type="text" [(ngModel)]="emp.empMobNo"> 
+                       </span>
+                   </td>
+                    <td>
+                        <span *ngIf="emp.empId">
+                            {{emp.empAdd}} 
+                        </span>
+                        <span *ngIf="!emp.empId">
+                            <input type="text" [(ngModel)]="emp.empAdd"> 
+                        </span>
+                    </td>
+                   <td>
+                        <span *ngIf="emp.empId">
+                          {{emp.empReportingPerson}} 
+                        </span>
+                        <span *ngIf="!emp.empId">
+                           <input type="text" [(ngModel)]="emp.empReportingPerson"> 
+                        </span>
+                   </td>
+                   <!-- <td>
+                       <button class="button mb-3" height="30px" (click)="onUpdateClick()">
+                        Update</button>
+                   </td> -->
+                   <td>
+                       <button class="button mb-3" (click)="onDeleteClick(emp)">
+                        Delete</button>
+                   </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div> 
+<div class="form-row"> 
+    <button class="button mb-3" (click)="onAddNewEmployee()">
+        Add New Employee</button>
+    <button class="button mb-3" (click)="onSaveClick()" [disabled]="!saveBtn">
+        Save</button>
+</div>

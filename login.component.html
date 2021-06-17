@@ -1,0 +1,66 @@
+<div>
+    <div class="login-img" >
+         <img src="assets/img/Tulips.jpg" style="width: 773px; height: 675px">
+    </div> 
+    <div class="right-content">
+         <!-- <div class="content box1">
+             <img src="assets/images/USIT.png" width="260" height="80">
+         </div> -->
+         <div class="invalid-login">
+               <h1 class="h3">Login</h1>
+         </div>
+        <div class="invalid-login">
+              <p class="p">Please enter your username or work email address</p>
+        </div>
+        <div class="invalid-login" *ngIf="invalidLoginMsg">
+              <p class="p red">Invalid login attempt.</p>
+        </div>
+        <!-- <div><h5 class="red">Invalid login attempt.</h5></div> -->
+        <!-- <div class="content">
+             <input class="rcorners2" required data-val="true" data-val-required="Enter a submodel name"
+                placeholder="usit" type="text" style="background-color: #E8EDF1;font-size:14px;" >
+               <label for="SubdomainName">
+               <span class="text-danger field-validation-valid" data-valmsg-for="SubdomainName"
+               data-valmsg-replace="true"></span>
+               <span>Subdomain Name</span>
+                </label> 
+        </div> -->
+        <div class="content">
+             <input class="rcorners2" placeholder="Username" type="text" [(ngModel)]="userName" style="font-size:14px;height: 15px;">
+        </div>
+        <div class="content">
+             <input class="rcorners2" placeholder="Password" type="password" [(ngModel)]="passWord" style="font-size:14px;;height: 15px;">
+        </div>
+        <div class="form-row align-items-center mx-1">
+              <div class=" mr-5">
+                  <button class="button" type="submit" (click)="onSubmitClick()">Login</button>
+              </div>
+              <span class=" ml-5"></span>
+              <!-- <div class="forgot-password-btn ml-5">
+                <button class="btn small-font btn-link"  (click)="onPasswordChangeClick()">Forgot Password</button>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+
+
+<!-- <div class="form-row">
+    
+        <img src="assets/img/Tulips.jpg" width="50%" height="100%">
+    
+    <div>
+        <div class="form-row">
+            <label>User Name</label>
+            <input type="text">
+        </div>
+        <div class="form-row">
+            <label>Password</label>
+            <input type="password">
+        </div>
+        <button type="submit">Login</button>
+    </div>
+    
+</div> -->
+
+
